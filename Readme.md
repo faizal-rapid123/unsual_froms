@@ -36,6 +36,20 @@ this project relies on:
 - [git] - for version controls
 
 
+## Defined routes(Api end points)
+"<hostaddress>/post"
+* Accept Post requests with Json body to add new thread
+
+"<hostaddress>/thread/{threadname}"
+* Accept get requests with threadname as dynamic path
+
+"<hostaddress>/thread/{threadname}"
+* Accept Patch method and and a json body to update thread content, will return custom error if you're not the owner of thread. ie, your ip dosent match the ip associated with the thread
+
+
+"<hostaddress>/search"
+* Accept get requests with a tital of thread as form data , if found returns thread else custom not found message 
+
 ## Installation
 
 Unusual forms requires [RUST](https://www.rust-lang.org/tools/install) v1.6+ to run.
