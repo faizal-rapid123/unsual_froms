@@ -40,11 +40,15 @@ this project relies on:
 "<hostaddress>/post"
 * Accept Post requests with Json body to add new thread
 
-"<hostaddress>/thread/{threadname}"
+"<hostaddress>//thread/read/{threadname}"
 * Accept get requests with threadname as dynamic path
 
-"<hostaddress>/thread/{threadname}"
+"<hostaddress>//thread/update/{threadname}"
 * Accept Patch method and and a json body to update thread content, will return custom error if you're not the owner of thread. ie, your ip dosent match the ip associated with the thread
+  
+  
+"/thread/delete/{threadname}"
+* Accept patch method and delete the thread, only owner of the user can access this api
 
 
 "<hostaddress>/search"
